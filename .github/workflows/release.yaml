@@ -8,8 +8,8 @@ on:
         required: true
 
 jobs:
-  build:
-    name: Build
+  build-and-release:
+    name: Build & Release
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
