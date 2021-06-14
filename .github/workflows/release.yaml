@@ -18,21 +18,21 @@ jobs:
           FOLDER_NAME: camelcase
         run: |
           cp -r ${{ env.FOLDER_NAME}} ${{ env.FOLDER_NAME}}.popclipext
-          tar -zxvf ${{ env.FOLDER_NAME}}.popclipext.tar.gz ${{ env.FOLDER_NAME}}.popclipext
-
+          tar -czvf ${{ env.FOLDER_NAME}}.popclipext.tar.gz ${{ env.FOLDER_NAME}}.popclipext
+          
       - name: Build Kebab case
         env:
           FOLDER_NAME: kebabcase
         run: |
           cp -r ${{ env.FOLDER_NAME}} ${{ env.FOLDER_NAME}}.popclipext
-          tar -zxvf ${{ env.FOLDER_NAME}}.popclipext.tar.gz ${{ env.FOLDER_NAME}}.popclipext
+          tar -czvf ${{ env.FOLDER_NAME}}.popclipext.tar.gz ${{ env.FOLDER_NAME}}.popclipext
 
       - name: Build Snake case
         env:
           FOLDER_NAME: snakecase
         run: |
           cp -r ${{ env.FOLDER_NAME}} ${{ env.FOLDER_NAME}}.popclipext
-          tar -zxvf ${{ env.FOLDER_NAME}}.popclipext.tar.gz ${{ env.FOLDER_NAME}}.popclipext
+          tar -czvf ${{ env.FOLDER_NAME}}.popclipext.tar.gz ${{ env.FOLDER_NAME}}.popclipext
 
       - name: Release
         uses: softprops/action-gh-release@v1
