@@ -10,3 +10,4 @@ runs:
     - run: |
         cp -r ${{ inputs.extension-name}} ${{ inputs.extension-name}}.popclipext
         tar -czvf ${{ inputs.extension-name}}.popclipext.tar.gz ${{ inputs.extension-name}}.popclipext
+      shell: bash
