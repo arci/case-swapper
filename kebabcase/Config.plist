@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist>
+	<dict>
+		<key>Extension Name</key>
+		<string>Kebab case</string>
+		<key>Extension Description</key>
+		<string>Convert selected text to Kebab case</string>
+		<key>Extension Identifier</key>
+		<string>com.arcidiacono.popclip.extension.kebab-case</string>
+		<key>Actions</key>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>Kebab case</string>
+				<key>Image File</key>
+				<string>kebabcase.png</string>
+				<key>Script Interpreter</key>
+				<string>/usr/local/bin/perl</string>
+				<key>Shell Script File</key>
+				<string>kebabcase.pl</string>
+				<key>After</key>
+				<string>paste-result</string>
+			</dict>
+		</array>
+	</dict>
+</plist>

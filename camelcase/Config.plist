@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist>
+	<dict>
+		<key>Extension Name</key>
+		<string>Camel case</string>
+		<key>Extension Description</key>
+		<string>Convert selected text to Camel case</string>
+		<key>Extension Identifier</key>
+		<string>com.arcidiacono.popclip.extension.camel-case</string>
+		<key>Actions</key>
+		<array>
+			<dict>
+				<key>Title</key>
+				<string>Camel case</string>
+				<key>Image File</key>
+				<string>camelcase.png</string>
+				<key>Script Interpreter</key>
+				<string>/usr/local/bin/perl</string>
+				<key>Shell Script File</key>
+				<string>camelcase.pl</string>
+				<key>After</key>
+				<string>paste-result</string>
+			</dict>
+		</array>
+	</dict>
+</plist>

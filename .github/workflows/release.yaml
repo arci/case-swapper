@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  build-scratch-blueprint:
+    name: Build extensions
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Build
+        run: |
+          cp -r camelcase camelcase.popclipext
+          cp -r kebabcase kebabcase.popclipext
+          cp -r snakecase snakecase.popclipext
+
+      - name: Upload binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: "*.popclipext"
+          file_glob: true
+          asset_name: ${{ github.ref }}
+          tag: ${{ github.ref }}
+          overwrite: true
