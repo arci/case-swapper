@@ -4,7 +4,7 @@ Collection of [PopClip](https://pilotmoon.com/popclip) extensions that converts 
 
 ## Installation
 
-1. `brew install perl`)
+1. `brew install perl`
 2. run the `build.sh` script
 3. double-click each one of the generated files to install the extension
 
