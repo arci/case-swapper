@@ -6,8 +6,8 @@ on:
       - "*"
 
 jobs:
-  build-scratch-blueprint:
-    name: Build extensions
+  build:
+    name: Build 
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -19,12 +19,12 @@ jobs:
           cp -r kebabcase kebabcase.popclipext
           cp -r snakecase snakecase.popclipext
 
-      - name: Upload binaries to release
-        uses: svenstaro/upload-release-action@v2
+      - name: Release
+        uses: softprops/action-gh-release@v1
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: "*.popclipext"
-          file_glob: true
-          asset_name: ${{ github.ref }}
-          tag: ${{ github.ref }}
-          overwrite: true
+          files: |
+            camelcase.popclipext
+            kebabcase.popclipext
+            snakecase.popclipext
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
