@@ -4,9 +4,12 @@ Collection of [PopClip](https://pilotmoon.com/popclip) extensions that converts 
 
 ## Installation
 
-1. `brew install perl`
-2. run the `build.sh` script
-3. double-click each one of the generated files to install the extension
+You can download the latest "build" from [GitHub](https://github.com/arci/popclip-case-convert/releases/latest)
+
+Or you can "built" it manually:
+
+1. add the `.popclipext` extension to the folder extension you are interested in
+2. double-click it
 
 ## Credits
 
