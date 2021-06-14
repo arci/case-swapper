@@ -1,0 +1,12 @@
+name: Build PopClip extension
+description: Build PopClip extension
+inputs:
+  extension-name:
+    description: "Extension name"
+    required: true
+runs:
+  using: composite
+  steps:
+    - run: |
+        cp -r ${{ inputs.extension-name}} ${{ inputs.extension-name}}.popclipext
+        tar -czvf ${{ inputs.extension-name}}.popclipext.tar.gz ${{ inputs.extension-name}}.popclipext
