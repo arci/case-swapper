@@ -1,9 +1,11 @@
 name: Release
 
 on:
-  push:
-    tags:
-      - "*"
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'The version to release (e.g. v0.0.1)'
+        required: true
 
 jobs:
   build:
@@ -31,6 +33,9 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          name: ${{ github.event.inputs.version }}
+          tag_name: ${{ github.event.inputs.version }}
+          fail_on_unmatched_files: true
           files: |
             camelcase.popclipext.tar.gz
             kebabcase.popclipext.tar.gz
