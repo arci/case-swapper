@@ -4,7 +4,7 @@ Collection of [PopClip](https://pilotmoon.com/popclip) extensions that converts 
 
 ## Installation
 
-You can download the latest "build" from [GitHub](https://github.com/arci/popclip-case-convert/releases/latest)
+You can download the latest "build" from the [latest release](https://github.com/arci/popclip-case-convert/releases/latest)
 
 Or you can "built" it manually:
 
