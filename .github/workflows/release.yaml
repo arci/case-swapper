@@ -1,4 +1,4 @@
-name: Release
+name: Build & Release
 
 on:
   workflow_dispatch:
@@ -35,7 +35,6 @@ jobs:
         with:
           name: ${{ github.event.inputs.version }}
           tag_name: ${{ github.event.inputs.version }}
-          fail_on_unmatched_files: true
           files: |
             camelcase.popclipext.tar.gz
             kebabcase.popclipext.tar.gz
