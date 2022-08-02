@@ -16,7 +16,7 @@
 				<key>Image File</key>
 				<string>camelcase.png</string>
 				<key>Script Interpreter</key>
-				<string>/usr/local/bin/perl</string>
+				<string>/usr/bin/perl</string>
 				<key>Shell Script File</key>
 				<string>camelcase.pl</string>
 				<key>After</key>
